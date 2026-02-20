@@ -291,71 +291,96 @@ footer {
 }
 
 /* =========================================
-   MOBILE RESPONSIVENESS (COMPLETELY OVERHAULED)
+   MOBILE RESPONSIVENESS (THE ULTIMATE FIX)
    ========================================= */
 @media (max-width: 768px) {
-    /* Make navigation stack and fit nicely */
+    /* 1. Navigation Restructure */
     nav { 
         flex-direction: column; 
-        gap: 10px; 
         padding: 15px 5%;
     }
-    
     nav ul {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
+        margin-top: 10px;
+        flex-wrap: wrap;
     }
+    nav a { font-size: 0.85rem; }
 
-    /* Shrink the giant hero banner texts for phone screens */
+    /* 2. OVERRIDE INLINE STYLES ON HERO BANNERS (Fixes squished text!) */
     .hero {
-        padding: 80px 5%;
+        padding: 60px 5% !important; 
     }
-
     .hero h1 { 
-        font-size: 1.8rem; 
+        font-size: 1.8rem !important; 
     }
-
     .hero p {
-        font-size: 1rem;
+        font-size: 1rem !important;
+        margin-bottom: 20px !important;
     }
     
-    /* Make buttons span the whole width of the screen so they are easy to tap */
+    /* 3. Make buttons full-width for easy tapping */
     .cta-group {
         flex-direction: column;
         width: 100%;
         gap: 15px;
     }
-
     .btn {
         width: 100%;
+        display: block;
         text-align: center;
     }
     
-    /* Stack the trust icons neatly */
+    /* 4. Trust Bar: Neat 2x2 grid instead of a massive list */
     .trust-bar {
-        flex-direction: column;
-        align-items: center;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
         gap: 15px;
+        padding: 20px 5%;
+    }
+    .trust-item {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.75rem;
+        gap: 5px;
     }
 
-    /* Bring in the massive padding off the edges so content has room */
+    /* 5. Tame the general padding */
     .section-padding { 
-        padding: 50px 5%; 
+        padding: 40px 5% !important; 
     }
-
     .section-title h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
-
-    /* THE MAGIC RULE: This forces EVERY grid to become a 1-column stack on phones */
+    
+    /* 6. FORCE ALL INLINE GRIDS TO 1 COLUMN */
     .grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
     }
+    
+    /* 7. EXCEPT the Staff Gallery - force to 2 columns so portraits aren't massive */
+    .grid[style*="minmax"] {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important;
+    }
 
-    /* Give cards a little less padding on phones so text isn't squished */
-    .card {
-        padding: 25px;
+    /* 8. Fix the Doctor's inline padding pushing her text off-screen */
+    div[style*="padding-left: 20px"] {
+        padding-left: 0 !important;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    /* 9. Contact Page Form/Boxes */
+    div[style*="min-width: 300px"] {
+        min-width: 100% !important;
+    }
+    
+    /* 10. Footer Links Stack */
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
