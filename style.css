@@ -1,1 +1,48 @@
 
+/* Branding Colors */
+:root {
+    --charcoal: #333333;
+    --steel-blue: #4682B4;
+    --off-white: #f9f9f9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: var(--charcoal);
+    background-color: var(--off-white);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { text-decoration: none; color: var(--charcoal); font-weight: bold; }
+
+.hero {
+    background-color: var(--charcoal);
+    color: white;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--steel-blue);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.trust-indicators {
+    background: #eeeeee;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
