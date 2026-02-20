@@ -3,38 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOHC | Occupational Health Kimberley</title>
+    <title>KOHC | Occupational Health Services Kimberley</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">KOHC</div>
+        <div class="logo">KOHC<span>.</span></div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="corporate.html">Corporate</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero">
         <h1>Comprehensive Occupational Health Services for the Mining & Industrial Sector</h1>
-        <p>Supporting compliance, safety, and workforce wellbeing in the Northern Cape.</p>
-        <div class="cta-buttons">
-            <a href="#" class="btn-primary">Book an Appointment</a>
-            <a href="#" class="btn-secondary">Request Company Proposal</a>
+        <p>Supporting compliance, safety and workforce wellbeing in the Northern Cape.</p>
+        <div class="cta-group">
+            <a href="contact.html" class="btn btn-primary">Book an Appointment</a>
+            <a href="corporate.html" class="btn btn-secondary">Request Company Proposal</a>
         </div>
     </header>
 
-    <section class="trust-indicators">
-        <p>✓ HPCSA Registered | ✓ Mining Industry Expertise | ✓ POPIA Compliant | ✓ Fast Turnaround</p>
+    <div class="trust-bar">
+        <div class="trust-item"><i class="fas fa-check-circle"></i> HPCSA REGISTERED</div>
+        <div class="trust-item"><i class="fas fa-hard-hat"></i> MINING INDUSTRY EXPERTS</div>
+        <div class="trust-item"><i class="fas fa-user-shield"></i> POPIA COMPLIANT</div>
+        <div class="trust-item"><i class="fas fa-bolt"></i> FAST TURNAROUND</div>
+    </div>
+
+    <section id="intro" class="section-padding">
+        <div class="section-title">
+            <h2>Your Compliance Partner</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2rem; color: #555;">Kimberley Occupational Health Clinic (KOHC) is a specialised medical practice dedicated to protecting both employers and employees while ensuring full alignment with South African workplace legislation.</p>
+            <br>
+            <h3 style="color: var(--steel-blue);">Healthy employees. Compliant businesses. Safer workplaces.</h3>
+        </div>
     </section>
 
-    <section class="intro">
-        <h2>Healthy Employees. Compliant Businesses. Safer Workplaces.</h2>
-        <p>Kimberley Occupational Health Clinic (KOHC) is a specialised practice dedicated to supporting the mining, industrial, construction, and agricultural sectors.</p>
+    <section id="why-choose" class="section-padding" style="background: var(--light-grey);">
+        <div class="section-title">
+            <h2>Why Choose KOHC</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-microscope fa-2x" style="color: var(--steel-blue); margin-bottom: 15px;"></i>
+                <h3>Mining-Focused</h3>
+                <p>Specialised knowledge of DMRE and COF requirements.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-clock fa-2x" style="color: var(--steel-blue); margin-bottom: 15px;"></i>
+                <h3>Fast Turnaround</h3>
+                <p>We understand production pressures; we deliver results fast.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-handshake fa-2x" style="color: var(--steel-blue); margin-bottom: 15px;"></i>
+                <h3>Personal Service</h3>
+                <p>A dedicated partner, not a generic corporate chain.</p>
+            </div>
+        </div>
     </section>
+
+    <footer>
+        <div class="footer-grid">
+            <h3>Kimberley Occupational Health Clinic</h3>
+            <p>Your partner in Industrial & Mining Medical Compliance.</p>
+        </div>
+        <div class="footer-bottom" style="margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <span>&copy; 2026 KOHC</span> | 
+            <a href="popia.html" style="color: white; text-decoration: none;">POPIA Privacy Policy</a> | 
+            <a href="paia.html" style="color: white; text-decoration: none;">PAIA Manual</a> | 
+            <a href="terms.html" style="color: white; text-decoration: none;">Terms & Conditions</a>
+        </div>
+    </footer>
 
 </body>
 </html>
