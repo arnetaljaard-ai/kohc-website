@@ -88,6 +88,21 @@ nav a:hover {
     padding: 140px 10%;
     text-align: center;
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Custom styling for the corporate motto badge */
+.hero-motto {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-blue);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    display: block;
 }
 
 .hero h1 { 
@@ -95,10 +110,11 @@ nav a:hover {
     margin-bottom: 20px; 
     text-transform: uppercase;
     letter-spacing: 1px;
+    max-width: 950px;
 }
 
 .hero p { 
-    font-size: 1.2rem; 
+    font-size: 1.35rem; 
     margin-bottom: 40px; 
     font-weight: 300; 
     max-width: 800px;
@@ -311,11 +327,15 @@ footer {
     .hero {
         padding: 60px 5% !important; 
     }
+    .hero-motto {
+        font-size: 0.8rem !important;
+        margin-bottom: 10px !important;
+    }
     .hero h1 { 
         font-size: 1.8rem !important; 
     }
     .hero p {
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
         margin-bottom: 20px !important;
     }
     
