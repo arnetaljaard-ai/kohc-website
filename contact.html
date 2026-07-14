@@ -16,7 +16,7 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="compliance.html">Compliance</a></li>
             <li><a href="corporate.html">Corporate</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
@@ -28,26 +28,27 @@
     <section class="section-padding" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
         
         <div style="flex: 1; min-width: 300px; background: var(--light-grey); padding: 40px; border-radius: 8px;">
-            <h3 style="color: var(--steel-blue); margin-bottom: 20px;">Centre Details</h3> <!--[cite: 1] -->
-            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">📍 Location:</strong> 1 Molyneaux Road, Greenside, Kimberley</p> <!--[cite: 1] -->
-            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">📞 Phone / Cell:</strong> <a href="tel:+27833420344" style="color: var(--steel-blue); text-decoration: none;">083 342 0344</a></p> <!--[cite: 1] -->
-            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">✉️ Email:</strong> <a href="mailto:reception1@kimohc.co.za" style="color: var(--steel-blue); text-decoration: none;">reception1@kimohc.co.za</a></p> <!--[cite: 1] -->
-            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">🕒 Office Hours:</strong> Monday - Friday: 07:30 – 12:00</p> <!--[cite: 1] -->
+            <h3 style="color: var(--steel-blue); margin-bottom: 20px;">Centre Details</h3>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">📍 Location:</strong> 1 Molyneaux Road, Greenside, Kimberley</p>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">📞 Phone / Cell:</strong> <a href="tel:+27833420344" style="color: var(--steel-blue); text-decoration: none;">083 342 0344</a></p>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">✉️ Email:</strong> <a href="mailto:reception1@kimohc.co.za" style="color: var(--steel-blue); text-decoration: none;">reception1@kimohc.co.za</a></p>
+            <p style="margin-bottom: 12px; font-size: 1.1rem;"><strong style="color: var(--charcoal);">🕒 Office Hours:</strong> Monday - Friday: 07:30 – 12:00</p>
         </div>
 
         <div style="flex: 1; min-width: 300px; padding: 40px; border: 1px solid #ddd; border-radius: 8px;">
             <h3 style="margin-bottom: 20px;">Request a Booking / Proposal</h3>
             <form>
-                <input type="text" placeholder="Company Name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;">
-                <input type="text" placeholder="Contact Person" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;">
-                <input type="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;">
-                <textarea placeholder="How can we help? (e.g., Need 50 annual COFs)" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;"></textarea>
-                <button type="button" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
+                <input type="text" placeholder="Company Name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+                <input type="text" placeholder="Contact Person" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+                <input type="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+                <textarea placeholder="How can we help? (e.g., Need 50 annual COFs)" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required></textarea>
+                <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
             </form>
         </div>
 
     </section>
-   <footer>
+
+    <footer>
         <div class="footer-grid" style="padding: 40px 10%; display: flex; flex-direction: column; align-items: center; background: var(--charcoal); color: white;">
             <h3>Kimberley Occupational Health Centre</h3>
             <p>Your partner in Industrial & Mining Medical Compliance.</p>
