@@ -77,7 +77,11 @@ nav a {
 nav a:hover { 
     color: var(--steel-blue); 
 }
-
+nav a.active { 
+    color: var(--steel-blue); 
+    border-bottom: 2px solid var(--steel-blue);
+    padding-bottom: 3px;
+}
 /* =========================================
    HERO SECTION
    ========================================= */
@@ -324,6 +328,8 @@ footer {
     nav a { font-size: 0.85rem; }
 
     /* 2. OVERRIDE INLINE STYLES ON HERO BANNERS (Fixes squished text!) */
+    header { padding: 40px 5% !important; }
+    
     .hero {
         padding: 60px 5% !important; 
     }
