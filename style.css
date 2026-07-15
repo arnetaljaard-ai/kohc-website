@@ -4,13 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@300;400;600&display=swap');
 
 :root {
-    --charcoal: #2c3e50;
+    --charcoal: #1e293b; /* Deepened slightly for higher contrast against light backgrounds */
     --steel-blue: #4682b4;
     --accent-blue: #5dade2;
     --white: #ffffff;
     --light-grey: #f8f9fa;
-    --dark-bg: #1a252f;
-    --transition: all 0.3s ease;
+    --body-bg: #f4f7f9; /* Premium cool off-white background */
+    --dark-bg: #0f172a; /* Richer, darker footer */
+    
+    /* Apple-style ultra-smooth animation curve */
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
 
 * { 
@@ -21,9 +24,9 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #4a5568;
-    background-color: var(--white);
+    line-height: 1.7; /* Increased slightly for better breathability */
+    color: #475569; /* Softer slate grey for reading comfort */
+    background-color: var(--body-bg); /* This makes the glassmorphism pop */
 }
 
 h1, h2, h3, h4 { 
@@ -31,6 +34,7 @@ h1, h2, h3, h4 {
     font-weight: 700; 
     line-height: 1.2;
     letter-spacing: -0.5px;
+    color: var(--charcoal);
 }
 
 /* =========================================
@@ -42,12 +46,12 @@ nav {
     align-items: center;
     padding: 20px 8%;
     
-    /* The Glassmorphism Magic */
+    /* Enhanced Glassmorphism */
     background: rgba(255, 255, 255, 0.75); 
-    backdrop-filter: blur(16px); 
-    -webkit-backdrop-filter: blur(16px); /* Safari support */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     
     position: sticky;
     top: 0;
@@ -59,7 +63,7 @@ nav {
     font-weight: 800; 
     font-family: 'Montserrat', sans-serif;
     color: var(--charcoal); 
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .logo span { 
@@ -69,34 +73,39 @@ nav {
 nav ul { 
     display: flex; 
     list-style: none; 
-    gap: 30px; 
+    gap: 35px; 
 }
 
 nav a { 
     text-decoration: none; 
-    color: var(--charcoal); 
+    color: #64748b; 
     font-weight: 600; 
-    font-size: 0.9rem; 
+    font-size: 0.85rem; 
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: var(--transition); 
 }
 
 nav a:hover { 
     color: var(--steel-blue); 
 }
+
 nav a.active { 
     color: var(--steel-blue); 
     border-bottom: 2px solid var(--steel-blue);
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 }
+
 /* =========================================
    HERO SECTION
    ========================================= */
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1579165466541-74e2beeac70b?auto=format&fit=crop&q=80&w=2070'); 
+    /* Added background-attachment: fixed for Parallax premium feel */
+    background: linear-gradient(rgba(30, 41, 59, 0.88), rgba(30, 41, 59, 0.88)), url('https://images.unsplash.com/photo-1579165466541-74e2beeac70b?auto=format&fit=crop&q=80&w=2070'); 
     background-size: cover;
     background-position: center;
-    padding: 140px 10%;
+    background-attachment: fixed; 
+    padding: 160px 10%;
     text-align: center;
     color: var(--white);
     display: flex;
@@ -105,32 +114,34 @@ nav a.active {
     justify-content: center;
 }
 
-/* Custom styling for the corporate motto badge */
 .hero-motto {
     font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-weight: 800;
+    letter-spacing: 3px;
     color: var(--accent-blue);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     display: block;
 }
 
 .hero h1 { 
-    font-size: 3rem; 
-    margin-bottom: 20px; 
+    font-size: 3.2rem; 
+    margin-bottom: 25px; 
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     max-width: 950px;
+    color: var(--white);
 }
 
 .hero p { 
-    font-size: 1.35rem; 
-    margin-bottom: 40px; 
+    font-size: 1.25rem; 
+    margin-bottom: 45px; 
     font-weight: 300; 
-    max-width: 800px;
+    line-height: 1.8;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    color: #cbd5e1;
 }
 
 /* =========================================
@@ -144,11 +155,12 @@ nav a.active {
 }
 
 .btn {
-    padding: 15px 30px;
-    border-radius: 4px;
+    padding: 16px 36px;
+    border-radius: 8px; /* Softer, modern corners */
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 1px;
     font-size: 0.85rem;
     transition: var(--transition);
     cursor: pointer;
@@ -156,137 +168,160 @@ nav a.active {
 }
 
 .btn-primary { 
-    /* Subtle gradient from Steel Blue to a slightly darker shade */
-    background: linear-gradient(135deg, var(--steel-blue), #32628a); 
+    background: linear-gradient(135deg, var(--steel-blue), #3b719f); 
     color: var(--white); 
     border: none;
-    box-shadow: 0 4px 15px rgba(70, 130, 180, 0.3);
+    box-shadow: 0 10px 20px rgba(70, 130, 180, 0.25);
 }
 
 .btn-primary:hover { 
     background: linear-gradient(135deg, var(--accent-blue), var(--steel-blue)); 
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 20px rgba(70, 130, 180, 0.5);
+    transform: translateY(-3px); 
+    box-shadow: 0 15px 25px rgba(70, 130, 180, 0.4);
 }
 
 .btn-secondary { 
-    border: 2px solid var(--white); 
+    border: 2px solid rgba(255, 255, 255, 0.8); 
     color: var(--white); 
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
 }
 
 .btn-secondary:hover { 
     background: var(--white); 
     color: var(--charcoal); 
     transform: translateY(-3px);
+    border-color: var(--white);
 }
 
 /* =========================================
    TRUST BAR
    ========================================= */
 .trust-bar {
-    background: var(--light-grey);
-    padding: 20px 10%;
+    background: var(--white);
+    padding: 25px 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     flex-wrap: wrap;
     gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
 }
 
 .trust-item { 
     font-weight: 700; 
-    color: #555; 
+    color: var(--charcoal); 
     font-size: 0.85rem; 
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .trust-item i {
     color: var(--steel-blue);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /* =========================================
    SECTIONS & GRIDS
    ========================================= */
 .section-padding { 
-    padding: 80px 10%; 
+    padding: 100px 10%; 
 }
 
 .section-title { 
     text-align: center; 
-    margin-bottom: 50px; 
+    margin-bottom: 60px; 
 }
 
 .section-title h2 { 
-    font-size: 2.2rem; 
-    color: var(--charcoal); 
+    font-size: 2.4rem; 
     position: relative; 
-    padding-bottom: 15px; 
+    padding-bottom: 20px; 
     text-transform: uppercase;
 }
 
 .section-title h2::after { 
     content: ''; 
-    width: 60px; 
+    width: 50px; 
     height: 4px; 
     background: var(--steel-blue); 
     position: absolute; 
     bottom: 0; 
     left: 50%; 
     transform: translateX(-50%); 
+    border-radius: 2px;
 }
 
 .grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 40px; 
 }    
+
+/* Premium Floating Glass Cards */
 .card { 
-    background: rgba(255, 255, 255, 0.85); 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 40px; 
-    border-radius: 12px; /* Slightly softer corners for a premium feel */
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-top: 4px solid var(--steel-blue); 
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 45px 35px; 
+    border-radius: 16px; 
+    border: 1px solid rgba(255, 255, 255, 1);
     
-    /* Tinted, soft shadow instead of harsh black */
-    box-shadow: 0 10px 30px rgba(70, 130, 180, 0.08); 
+    /* Complex layered shadow for 3D depth */
+    box-shadow: 
+        0 4px 6px -1px rgba(70, 130, 180, 0.05),
+        0 20px 40px -10px rgba(70, 130, 180, 0.1); 
+    
     transition: var(--transition); 
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+/* Accent line moved inside the card for a sleeker look */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--steel-blue), var(--accent-blue));
+}
+
 .card:hover { 
-    transform: translateY(-8px); 
-    /* Glow effect on hover */
-    box-shadow: 0 15px 35px rgba(70, 130, 180, 0.18);
-    background: rgba(255, 255, 255, 1);
+    transform: translateY(-10px) scale(1.01); 
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 
+        0 10px 15px -3px rgba(70, 130, 180, 0.1),
+        0 30px 60px -15px rgba(70, 130, 180, 0.2);
 }
 
 .card h3 { 
-    margin-bottom: 15px; 
-    color: var(--charcoal); 
-    font-size: 1.3rem;
+    margin-bottom: 20px; 
+    font-size: 1.4rem;
 }
 
 .card p {
-    color: #555;
+    color: #64748b;
+    margin-bottom: 15px;
 }
 
 .card ul {
     list-style: none;
     text-align: left;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .card ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    color: #555;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #475569;
+    font-size: 0.95rem;
 }
 
 .card ul li:last-child {
@@ -298,30 +333,34 @@ nav a.active {
    ========================================= */
 footer { 
     background: var(--dark-bg); 
-    color: var(--white); 
-    padding: 60px 10% 20px; 
+    color: #cbd5e1; 
+    padding: 80px 10% 30px; 
     text-align: center; 
 }
 
 .footer-grid h3 {
-    color: var(--steel-blue);
-    margin-bottom: 10px;
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .footer-bottom { 
-    margin-top: 40px; 
-    padding-top: 20px; 
-    border-top: 1px solid rgba(255,255,255,0.1); 
+    margin-top: 60px; 
+    padding-top: 25px; 
+    border-top: 1px solid rgba(255,255,255,0.05); 
     font-size: 0.85rem; 
-    color: #aaa;
+    color: #94a3b8;
 }
 
 .footer-bottom a {
+    color: #cbd5e1;
+    text-decoration: none;
     transition: var(--transition);
 }
 
 .footer-bottom a:hover {
-    color: var(--steel-blue) !important;
+    color: var(--accent-blue) !important;
 }
 
 /* =========================================
@@ -335,28 +374,25 @@ footer {
     }
     nav ul {
         justify-content: center;
-        gap: 12px;
-        margin-top: 10px;
+        gap: 15px;
+        margin-top: 15px;
         flex-wrap: wrap;
     }
-    nav a { font-size: 0.85rem; }
+    nav a { font-size: 0.8rem; }
 
-    /* 2. OVERRIDE INLINE STYLES ON HERO BANNERS (Fixes squished text!) */
-    header { padding: 40px 5% !important; }
+    /* 2. OVERRIDE INLINE STYLES ON HERO BANNERS */
+    header { padding: 60px 5% !important; }
     
     .hero {
-        padding: 60px 5% !important; 
-    }
-    .hero-motto {
-        font-size: 0.8rem !important;
-        margin-bottom: 10px !important;
+        padding: 80px 5% !important; 
+        background-attachment: scroll; /* Disable parallax on mobile for performance */
     }
     .hero h1 { 
-        font-size: 1.8rem !important; 
+        font-size: 2rem !important; 
     }
     .hero p {
         font-size: 1.1rem !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 30px !important;
     }
     
     /* 3. Make buttons full-width for easy tapping */
@@ -371,44 +407,44 @@ footer {
         text-align: center;
     }
     
-    /* 4. Trust Bar: Neat 2x2 grid instead of a massive list */
+    /* 4. Trust Bar: Neat 2x2 grid */
     .trust-bar {
         display: grid !important;
         grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        padding: 20px 5%;
+        gap: 20px;
+        padding: 25px 5%;
     }
     .trust-item {
         flex-direction: column;
         text-align: center;
         font-size: 0.75rem;
-        gap: 5px;
+        gap: 8px;
     }
 
     /* 5. Tame the general padding */
     .section-padding { 
-        padding: 40px 5% !important; 
+        padding: 60px 5% !important; 
     }
     .section-title h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     
     /* 6. FORCE ALL INLINE GRIDS TO 1 COLUMN */
     .grid {
         grid-template-columns: 1fr !important;
-        gap: 20px !important;
+        gap: 25px !important;
     }
     
-    /* 7. EXCEPT the Staff Gallery - force to 2 columns so portraits aren't massive */
+    /* 7. EXCEPT the Staff Gallery */
     .grid[style*="minmax"] {
         grid-template-columns: 1fr 1fr !important;
-        gap: 10px !important;
+        gap: 15px !important;
     }
 
-    /* 8. Fix the Doctor's inline padding pushing her text off-screen */
+    /* 8. Fix the Doctor's inline padding */
     div[style*="padding-left: 20px"] {
         padding-left: 0 !important;
-        margin-top: 15px;
+        margin-top: 25px;
         text-align: center;
     }
 
@@ -421,6 +457,6 @@ footer {
     .footer-bottom {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 }
