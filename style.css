@@ -4,16 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@300;400;600&display=swap');
 
 :root {
-    --charcoal: #1e293b; /* Deepened slightly for higher contrast against light backgrounds */
-    --steel-blue: #4682b4;
-    --accent-blue: #5dade2;
+    --charcoal: #1e293b; /* Deepened slightly for higher contrast and premium appeal */
+    --steel-blue: #4682b4; /* Brand identity steel blue[cite: 50] */
+    --accent-blue: #5dade2; /* Bright accent blue[cite: 50] */
     --white: #ffffff;
-    --light-grey: #f8f9fa;
-    --body-bg: #f4f7f9; /* Premium cool off-white background */
-    --dark-bg: #0f172a; /* Richer, darker footer */
+    --light-grey: #f1f5f9; /* Modern slate-tinted light grey */
+    --body-bg: #f8fafc; /* Ultra-premium cool off-white background */
+    --dark-bg: #0f172a; /* Richer, darker navy-charcoal for high-end contrast */
     
-    /* Apple-style ultra-smooth animation curve */
-    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+    /* Apple-style custom cubic-bezier for silky, natural-feeling transitions */
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * { 
@@ -23,35 +23,35 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.7; /* Increased slightly for better breathability */
-    color: #475569; /* Softer slate grey for reading comfort */
-    background-color: var(--body-bg); /* This makes the glassmorphism pop */
+    font-family: 'Open Sans', sans-serif; /*[cite: 50] */
+    line-height: 1.7; /* Extra breathing room for modern typography */
+    color: #475569; /* Soft slate grey instead of harsh charcoal[cite: 50] */
+    background-color: var(--body-bg); /* Highlighted background for glassmorphism to sit on */
 }
 
 h1, h2, h3, h4 { 
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif; /*[cite: 50] */
     font-weight: 700; 
-    line-height: 1.2;
-    letter-spacing: -0.5px;
+    line-height: 1.25;
+    letter-spacing: -0.5px; /* Tighter kerning for editorial style[cite: 50] */
     color: var(--charcoal);
 }
 
 /* =========================================
-   NAVIGATION BAR
+   NAVIGATION BAR (Frosted Glass Effect)
    ========================================= */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 18px 8%;
     
-    /* Enhanced Glassmorphism */
+    /* Premium Glassmorphic Layer */
     background: rgba(255, 255, 255, 0.75); 
-    backdrop-filter: blur(20px); 
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px); /* Safari support[cite: 50] */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Ultra-fine highlight line */
+    box-shadow: 0 4px 30px rgba(15, 23, 42, 0.03); /* Extremely soft ambient shadow */
     
     position: sticky;
     top: 0;
@@ -59,15 +59,15 @@ nav {
 }
 
 .logo { 
-    font-size: 1.8rem; 
+    font-size: 1.6rem; 
     font-weight: 800; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; /*[cite: 50] */
     color: var(--charcoal); 
     letter-spacing: 0.5px;
 }
 
 .logo span { 
-    color: var(--steel-blue); 
+    color: var(--steel-blue); /*[cite: 50] */
 }
 
 nav ul { 
@@ -78,7 +78,7 @@ nav ul {
 
 nav a { 
     text-decoration: none; 
-    color: #64748b; 
+    color: #64748b; /* Softened standard link color */
     font-weight: 600; 
     font-size: 0.85rem; 
     text-transform: uppercase;
@@ -87,27 +87,27 @@ nav a {
 }
 
 nav a:hover { 
-    color: var(--steel-blue); 
+    color: var(--steel-blue); /*[cite: 50] */
 }
 
 nav a.active { 
-    color: var(--steel-blue); 
-    border-bottom: 2px solid var(--steel-blue);
+    color: var(--steel-blue); /*[cite: 50] */
+    border-bottom: 2px solid var(--steel-blue); /*[cite: 50] */
     padding-bottom: 4px;
 }
 
 /* =========================================
-   HERO SECTION
+   HERO SECTION (With Parallax Depth)
    ========================================= */
 .hero {
-    /* Added background-attachment: fixed for Parallax premium feel */
-    background: linear-gradient(rgba(30, 41, 59, 0.88), rgba(30, 41, 59, 0.88)), url('https://images.unsplash.com/photo-1579165466541-74e2beeac70b?auto=format&fit=crop&q=80&w=2070'); 
+    /* Subtle overlay gradient to blend into dark headers */
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1579165466541-74e2beeac70b?auto=format&fit=crop&q=80&w=2070'); /*[cite: 50] */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
+    background-attachment: fixed; /* Creates premium parallax background scroll */
     padding: 160px 10%;
     text-align: center;
-    color: var(--white);
+    color: var(--white); /*[cite: 50] */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,10 +115,10 @@ nav a.active {
 }
 
 .hero-motto {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 800;
-    letter-spacing: 3px;
-    color: var(--accent-blue);
+    letter-spacing: 3px; /* Clean tracking */
+    color: var(--accent-blue); /*[cite: 50] */
     margin-bottom: 20px;
     text-transform: uppercase;
     display: block;
@@ -128,7 +128,7 @@ nav a.active {
     font-size: 3.2rem; 
     margin-bottom: 25px; 
     text-transform: uppercase;
-    letter-spacing: 0px;
+    letter-spacing: 0.5px;
     max-width: 950px;
     color: var(--white);
 }
@@ -137,15 +137,14 @@ nav a.active {
     font-size: 1.25rem; 
     margin-bottom: 45px; 
     font-weight: 300; 
-    line-height: 1.8;
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-    color: #cbd5e1;
+    color: #cbd5e1; /* Off-white for sleek contrast */
 }
 
 /* =========================================
-   BUTTONS
+   BUTTONS (Dynamic Gradients)
    ========================================= */
 .cta-group { 
     display: flex; 
@@ -156,40 +155,42 @@ nav a.active {
 
 .btn {
     padding: 16px 36px;
-    border-radius: 8px; /* Softer, modern corners */
+    border-radius: 8px; /* Slightly softer corners for high-end look */
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 0.8rem;
     letter-spacing: 1px;
-    font-size: 0.85rem;
     transition: var(--transition);
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; /*[cite: 50] */
 }
 
 .btn-primary { 
-    background: linear-gradient(135deg, var(--steel-blue), #3b719f); 
+    /* Rich, multi-tone blue gradient */
+    background: linear-gradient(135deg, var(--steel-blue), #34628a); 
     color: var(--white); 
     border: none;
+    /* Brand-tinted glow shadow */
     box-shadow: 0 10px 20px rgba(70, 130, 180, 0.25);
 }
 
 .btn-primary:hover { 
-    background: linear-gradient(135deg, var(--accent-blue), var(--steel-blue)); 
+    background: linear-gradient(135deg, var(--accent-blue), var(--steel-blue)); /*[cite: 50] */
     transform: translateY(-3px); 
-    box-shadow: 0 15px 25px rgba(70, 130, 180, 0.4);
+    box-shadow: 0 15px 25px rgba(70, 130, 180, 0.45);
 }
 
 .btn-secondary { 
     border: 2px solid rgba(255, 255, 255, 0.8); 
-    color: var(--white); 
+    color: var(--white); /*[cite: 50] */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(5px);
 }
 
 .btn-secondary:hover { 
-    background: var(--white); 
-    color: var(--charcoal); 
+    background: var(--white); /*[cite: 50] */
+    color: var(--dark-bg); 
     transform: translateY(-3px);
     border-color: var(--white);
 }
@@ -203,16 +204,16 @@ nav a.active {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     flex-wrap: wrap;
     gap: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
 }
 
 .trust-item { 
     font-weight: 700; 
-    color: var(--charcoal); 
-    font-size: 0.85rem; 
+    color: #64748b; 
+    font-size: 0.8rem; 
     display: flex;
     align-items: center;
     gap: 10px;
@@ -221,12 +222,12 @@ nav a.active {
 }
 
 .trust-item i {
-    color: var(--steel-blue);
-    font-size: 1.4rem;
+    color: var(--steel-blue); /*[cite: 50] */
+    font-size: 1.3rem;
 }
 
 /* =========================================
-   SECTIONS & GRIDS
+   SECTIONS & GRIDS (Depth-based Cards)
    ========================================= */
 .section-padding { 
     padding: 100px 10%; 
@@ -239,6 +240,7 @@ nav a.active {
 
 .section-title h2 { 
     font-size: 2.4rem; 
+    color: var(--charcoal); 
     position: relative; 
     padding-bottom: 20px; 
     text-transform: uppercase;
@@ -248,7 +250,7 @@ nav a.active {
     content: ''; 
     width: 50px; 
     height: 4px; 
-    background: var(--steel-blue); 
+    background: linear-gradient(90deg, var(--steel-blue), var(--accent-blue)); 
     position: absolute; 
     bottom: 0; 
     left: 50%; 
@@ -262,19 +264,19 @@ nav a.active {
     gap: 40px; 
 }    
 
-/* Premium Floating Glass Cards */
+/* Premium Glassmorphic Service Cards */
 .card { 
-    background: rgba(255, 255, 255, 0.7); 
+    background: rgba(255, 255, 255, 0.7); /* Perfect transparency on body-bg */
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /*[cite: 50] */
     padding: 45px 35px; 
-    border-radius: 16px; 
-    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 16px; /* Sleeker, softer corners[cite: 50] */
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Sharp inner border[cite: 50] */
     
-    /* Complex layered shadow for 3D depth */
+    /* Double-layered soft ambient shadow with brand-tinted undertones */
     box-shadow: 
-        0 4px 6px -1px rgba(70, 130, 180, 0.05),
-        0 20px 40px -10px rgba(70, 130, 180, 0.1); 
+        0 4px 6px -1px rgba(70, 130, 180, 0.02),
+        0 20px 40px -10px rgba(70, 130, 180, 0.08); 
     
     transition: var(--transition); 
     text-align: center;
@@ -282,7 +284,7 @@ nav a.active {
     overflow: hidden;
 }
 
-/* Accent line moved inside the card for a sleeker look */
+/* Dynamic Top Border Line inside the card padding wrapper */
 .card::before {
     content: '';
     position: absolute;
@@ -291,24 +293,27 @@ nav a.active {
     width: 100%;
     height: 4px;
     background: linear-gradient(90deg, var(--steel-blue), var(--accent-blue));
+    opacity: 0.8;
 }
 
 .card:hover { 
-    transform: translateY(-10px) scale(1.01); 
-    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-10px) scale(1.02); 
+    background: rgba(255, 255, 255, 0.95); /*[cite: 50] */
+    /* Deeper, more expansive glow effect */
     box-shadow: 
-        0 10px 15px -3px rgba(70, 130, 180, 0.1),
-        0 30px 60px -15px rgba(70, 130, 180, 0.2);
+        0 10px 20px -3px rgba(70, 130, 180, 0.08),
+        0 30px 60px -15px rgba(70, 130, 180, 0.18); /*[cite: 50] */
 }
 
 .card h3 { 
-    margin-bottom: 20px; 
+    margin-bottom: 18px; 
+    color: var(--charcoal); 
     font-size: 1.4rem;
 }
 
 .card p {
     color: #64748b;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
 }
 
 .card ul {
@@ -319,7 +324,7 @@ nav a.active {
 
 .card ul li {
     padding: 12px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05); /* Soft divider lines */
     color: #475569;
     font-size: 0.95rem;
 }
@@ -333,7 +338,7 @@ nav a.active {
    ========================================= */
 footer { 
     background: var(--dark-bg); 
-    color: #cbd5e1; 
+    color: #94a3b8; /* Highly readable cool light-grey text */
     padding: 80px 10% 30px; 
     text-align: center; 
 }
@@ -341,20 +346,20 @@ footer {
 .footer-grid h3 {
     color: var(--white);
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
 }
 
 .footer-bottom { 
     margin-top: 60px; 
     padding-top: 25px; 
-    border-top: 1px solid rgba(255,255,255,0.05); 
+    border-top: 1px solid rgba(255, 255, 255, 0.04); 
     font-size: 0.85rem; 
-    color: #94a3b8;
+    color: #64748b;
 }
 
 .footer-bottom a {
-    color: #cbd5e1;
+    color: #94a3b8;
     text-decoration: none;
     transition: var(--transition);
 }
@@ -364,13 +369,13 @@ footer {
 }
 
 /* =========================================
-   MOBILE RESPONSIVENESS (THE ULTIMATE FIX)
+   MOBILE RESPONSIVENESS (Refined & Scaled)
    ========================================= */
 @media (max-width: 768px) {
     /* 1. Navigation Restructure */
     nav { 
         flex-direction: column; 
-        padding: 15px 5%;
+        padding: 15px 5%; /*[cite: 50] */
     }
     nav ul {
         justify-content: center;
@@ -381,11 +386,11 @@ footer {
     nav a { font-size: 0.8rem; }
 
     /* 2. OVERRIDE INLINE STYLES ON HERO BANNERS */
-    header { padding: 60px 5% !important; }
+    header { padding: 60px 5% !important; } /*[cite: 50] */
     
     .hero {
         padding: 80px 5% !important; 
-        background-attachment: scroll; /* Disable parallax on mobile for performance */
+        background-attachment: scroll; /* Disable parallax on mobile for smooth scrolling performance */
     }
     .hero h1 { 
         font-size: 2rem !important; 
