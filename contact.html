@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kimberley Occupational Health Centre to book an appointment or request a corporate proposal. Located at 1 Molyneaux Road, Greenside, Kimberley.">
     <title>Centre Details | KOHC</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -37,13 +38,17 @@
 
         <div style="flex: 1; min-width: 300px; padding: 40px; border: 1px solid #ddd; border-radius: 8px;">
             <h3 style="margin-bottom: 20px;">Request a Booking / Proposal</h3>
-            <form>
-                <input type="text" placeholder="Company Name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
-                <input type="text" placeholder="Contact Person" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
-                <input type="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
-                <textarea placeholder="How can we help? (e.g., Need 50 annual COFs)" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required></textarea>
-                <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
-            </form>
+            <form action="contact.php" method="POST">
+    <input type="text" name="company" placeholder="Company Name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+    
+    <input type="text" name="contact_person" placeholder="Contact Person" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+    
+    <input type="email" name="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required>
+    
+    <textarea name="message" placeholder="How can we help? (e.g., Need 50 annual COFs)" rows="4" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc;" required></textarea>
+    
+    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
+</form>
         </div>
 
     </section>
